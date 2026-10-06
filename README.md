@@ -13,3 +13,5 @@ How to run:
 
 Notes:
 - This is a simple demo using Matter.js from CDN. You can extend pieces, add scoring, or implement snapping constraints to enforce a strict Tetris grid and row-clearing logic.
+- (Also just a note this is AI, OK?"
+  
