@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>2D Physics Tetris-ish Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <h3>Pieces</h3>
+      <div class="pieces">
+        <button class="piece" data-type="I">I</button>
+        <button class="piece" data-type="O">O</button>
+        <button class="piece" data-type="T">T</button>
+        <button class="piece" data-type="L">L</button>
+        <button class="piece" data-type="J">J</button>
+        <button class="piece" data-type="S">S</button>
+        <button class="piece" data-type="Z">Z</button>
+        <button class="piece" data-type="BOMB">Bomb</button>
+        <button class="piece" data-type="BALL">Ball</button>
+        <button class="piece" data-type="HOOP">Goal</button>
+        <button class="piece" data-type="FOOTBALL">Football</button>
+        <button class="piece" data-type="CANNON">Cannon</button>
+        <button class="piece" data-type="PLATFORMER">Platformer</button>
+        <button class="piece" data-type="PLATFORM_SMALL">Platform S</button>
+        <button class="piece" data-type="PLATFORM_MEDIUM">Platform M</button>
+        <button class="piece" data-type="PLATFORM_LARGE">Platform L</button>
+        
+        <button class="piece" data-type="ERASER">Eraser</button>
+      </div>
+      <div class="controls">
+        <label for="bombStrength">Bomb strength</label>
+        <input id="bombStrength" type="range" min="0" max="200" value="100">
+        <label for="ballBounciness">Ball bounciness</label>
+        <input id="ballBounciness" type="range" min="0" max="100" value="90">
+      </div>
+      <div class="controls">
+        <p>Drag a piece into the play area (right).</p>
+        <p>Press <b>R</b> to rotate while dragging.</p>
+        <p>Use mouse to drag bodies after placement.</p>
+        <p>Drag from a cannon to aim it, then drop an object into the muzzle.</p>
+        <p>Platformer: A/D or left/right to move, W or Space to jump.</p>
+      </div>
+      <div class="trash" id="trash">
+        <div class="trash-icon">🗑️</div>
+        <div class="trash-label">Trash</div>
+      </div>
+    </aside>
+
+    <main id="play">
+      <canvas id="world"></canvas>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
